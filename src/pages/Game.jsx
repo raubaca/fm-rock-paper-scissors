@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import { choices, rules } from '../utils/constants';
+
 import Coin from '../components/Coin';
 import Result from '../components/Result';
+import Icon from '../components/Icon';
 
 const Wrapper = styled.div`
   margin: auto;
@@ -84,7 +86,9 @@ const Game = ({ userChoice, score, onScore }) => {
     <Wrapper>
       <ChoiceHolder style={{ gridArea: 'user' }}>
         <Choice win={result === 'win'}>
-          <Coin theme={userChoice} />
+          <Coin theme={userChoice} disabled>
+            <Icon theme={userChoice} />
+          </Coin>
         </Choice>
         <ChoicePlayer>You picked</ChoicePlayer>
       </ChoiceHolder>
@@ -95,7 +99,11 @@ const Game = ({ userChoice, score, onScore }) => {
       )}
       <ChoiceHolder style={{ gridArea: 'house' }}>
         <Choice win={result === 'lose'}>
-          {houseChoice && <Coin theme={houseChoice} />}
+          {houseChoice && (
+            <Coin theme={houseChoice} disabled>
+              <Icon theme={houseChoice} />
+            </Coin>
+          )}
         </Choice>
         <ChoicePlayer>The house picked</ChoicePlayer>
       </ChoiceHolder>

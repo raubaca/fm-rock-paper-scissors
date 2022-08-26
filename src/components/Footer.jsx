@@ -5,8 +5,9 @@ const Wrapper = styled.footer`
   text-align: center;
   p {
     font-size: 1rem;
+    color: var(--header-outline);
     a {
-      color: var(--score-text);
+      color: white;
     }
   }
 `;
@@ -34,11 +35,11 @@ const Footer = ({ onOpenModal }) => {
         Rules
       </Button>
       <p>
-        Challenge by
+        Challenge by{' '}
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
           Frontend Mentor
         </a>
-        . Coded by
+        . Coded by{' '}
         <a href="https://github.com/raubaca" target="_blank" rel="noreferrer">
           Rau
         </a>

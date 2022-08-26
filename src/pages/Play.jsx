@@ -5,6 +5,7 @@ import { choices } from '../utils/constants';
 import bgTriangle from '../assets/bg-triangle.svg';
 
 import Coin from '../components/Coin';
+import Icon from '../components/Icon';
 
 const Wrapper = styled.div`
   max-width: 320px;
@@ -34,9 +35,15 @@ const Play = ({ onChoice }) => {
   return (
     <Wrapper>
       {choices.map((choice) => (
-        <button type="button" onClick={setChoice} value={choice} key={choice}>
-          <Coin theme={choice} />
-        </button>
+        <Coin
+          type="button"
+          onClick={setChoice}
+          value={choice}
+          key={choice}
+          theme={choice}
+        >
+          <Icon theme={choice} />
+        </Coin>
       ))}
     </Wrapper>
   );
