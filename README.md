@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/rock-paper-scissors-styledcomponents-react-router-ow_zqKZQRw)
 - Live Site URL: [Vercel](https://fm-rock-paper-scissors.vercel.app/)
 
 ## My process
