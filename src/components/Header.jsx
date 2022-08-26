@@ -13,7 +13,7 @@ const Wrapper = styled.header`
   border-radius: 1em;
   @media (min-width: 769px) {
     max-width: 700px;
-    margin-bottom: 4em;
+    margin-bottom: 3em;
   }
 `;
 

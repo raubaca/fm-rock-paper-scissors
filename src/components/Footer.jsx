@@ -3,10 +3,11 @@ import styled from 'styled-components';
 
 const Wrapper = styled.footer`
   text-align: center;
-  @media (min-width: 769px) {
-    position: fixed;
-    bottom: 2em;
-    right: 2em;
+  p {
+    font-size: 1rem;
+    a {
+      color: var(--score-text);
+    }
   }
 `;
 
@@ -19,6 +20,11 @@ const Button = styled.button`
   text-transform: uppercase;
   border: 3px solid var(--header-outline);
   border-radius: 0.5em;
+  @media (min-width: 769px) {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+  }
 `;
 
 const Footer = ({ onOpenModal }) => {
@@ -27,6 +33,17 @@ const Footer = ({ onOpenModal }) => {
       <Button type="button" onClick={onOpenModal}>
         Rules
       </Button>
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor
+        </a>
+        . Coded by
+        <a href="https://github.com/raubaca" target="_blank" rel="noreferrer">
+          Rau
+        </a>
+        .
+      </p>
     </Wrapper>
   );
 };

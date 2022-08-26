@@ -28,6 +28,7 @@
 
 html {
   font-size: 62.25%;
+  line-height: 1;
 }
 
 *,
@@ -43,7 +44,6 @@ body {
   color: white;
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 1rem;
-  line-height: 1;
 }
 
 h1,
@@ -61,6 +61,15 @@ button {
   outline: 0;
   padding: 0;
   cursor: pointer;
+}
+
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  place-items: center;
+  gap: 1em;
+  padding: 3em 2em 0;
 }
 
 @media all and (min-width: 375px) {
@@ -81,5 +90,8 @@ button {
   }
   body {
     font-size: 1.6rem;
+  }
+  #root {
+    grid-template-rows: auto 1fr 3em;
   }
 }
