@@ -44,8 +44,11 @@ const Choice = styled.div`
   border-radius: 50%;
   ${({ win }) =>
     win && {
-      boxShadow: 'var(--highlight)',
+      animation: 'highlight 1s ease-out forwards',
     }}
+  & > * {
+    animation: pop 0.3s ease-in-out;
+  }
   @media (min-width: 769px) {
     --circle-size: 300px;
     --circle-border: 36px;

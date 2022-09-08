@@ -27,7 +27,7 @@
 }
 
 html {
-  font-size: 62.25%;
+  font-size: 62.5%;
   line-height: 1;
 }
 
@@ -93,5 +93,20 @@ button {
   }
   #root {
     grid-template-rows: auto 1fr 3em;
+  }
+}
+
+@keyframes highlight {
+  to {
+    box-shadow: var(--highlight);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
   }
 }
